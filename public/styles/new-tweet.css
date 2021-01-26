@@ -1,0 +1,36 @@
+.newtweet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 200px;
+
+  }
+
+
+/* Parent Class for button and counter */
+.submission {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  background-color: #4056a1;
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.counter {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+textarea{
+  width: 100%;
+  border: none;
+  resize: none;
+  background-color: transparent;
+  border-bottom: 2px solid black;
+
+}
+
