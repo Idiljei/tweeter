@@ -1,0 +1,16 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e7e2e2;
+  height: 400px;
+  width: 100%;
+  background-color: #ebd6a2;
+  background-image: url("https://www.transparenttextures.com/patterns/cutcube.png");
+}
+nav span {
+  font-family: 'Bungee', sans-serif;
+}
+
+
