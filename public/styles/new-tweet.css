@@ -1,11 +1,13 @@
-.newtweet {
+.new-tweet {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
-    width: 70%;
+    width: 100%;
     height: 200px;
+    margin-bottom: 2em; 
 
+    
   }
 
 
@@ -13,6 +15,7 @@
 .submission {
   display: flex;
   justify-content: space-between;
+
 }
 
 .button {
@@ -25,12 +28,17 @@
   font-family: "Source Sans Pro", sans-serif;
 }
 
+/* Text box area */
 textarea{
   width: 100%;
   border: none;
   resize: none;
-  background-color: transparent;
+  background-color:transparent;
   border-bottom: 2px solid black;
 
 }
 
+
+.addColour{
+  color: red;
+}
