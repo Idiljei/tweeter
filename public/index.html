@@ -46,8 +46,11 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span class="logo"> tweeter </span>
-      <span> Write a new tweet</span>
+      <span>tweeter</span>
+      <div class="right">
+        <p><b>Write</b> a new tweet</p>
+        <i class="arrow fas fa-angle-double-down"></i>
+      </div>
     </nav>
 
     <!-- Profile Photo  -->
@@ -60,76 +63,31 @@
         <h2>Your Name</h2>
       </div>
     </header>
-
+ 
+  
+  </form>
     <!-- Page-specific (main) content here -->
     <main class="container">
       <!-- Tweet text  -->
       <section class="new-tweet">
         <h2></h2>
-        <form action="/tweets/" method="POST">
+        <form id="formtweet" action="/tweets/" method="POST">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"> </textarea>
           <div class="submission">
-            <button class="button" type="submit">Tweet</button>
+            <button id="tweet-button" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
 
-      <!-- tweet number 1 container  -->
-      <div class="tweet-container">
-        <!-- first div -->
-        <div class="tweet-container-userinfo">
-          <div class="tweet-profile"><img src="/images/profile-hex.png" alt="Profile Image"><p>Idil Jei</p></div>
-          <div class="tweet-username">@idiljei</div>
-         
-        </div> 
-         <!-- body div -->
-        <div class="tweet-body">I'm starting to understand css</div>
-        <!-- tweet action div  -->
-        <div class="tweet-actions">
-          <div class="tweet-timestamp">10 days ago
-          </div>
-          <div class="tweet-icons">
-            <i class="fas fa-flag"></i>
-            <i class="far fa-flag"></i>
-            <i class="fas fa-retweet"></i>
-            <i class="fas fa-heart"></i>
-            <i class="far fa-heart"></i>
-          </div>
-        </div>
- 
-      </div>
-
-
-       <!-- tweet number 2 container  -->
-       <div class="tweet-container">
-        <!-- first div -->
-        <div class="tweet-container-userinfo">
-          <div class="tweet-profile"><img src="/images/profile-hex.png" alt="Profile Image"><p>Idil Jei</p></div>
-          <div class="tweet-username">@Fmoha061</div>
-         
-        </div> 
-         <!-- body div -->
-        <div class="tweet-body"> Get on my wavelength</div>
-        <!-- tweet action div  -->
-        <div class="tweet-actions">
-          <div class="tweet-timestamp">15 days ago
-          </div>
-          <div class="tweet-icons">
-            <i class="fas fa-flag"></i>
-            <i class="far fa-flag"></i>
-            <i class="fas fa-retweet"></i>
-            <i class="fas fa-heart"></i>
-            <i class="far fa-heart"></i>
-          </div>
-        </div>
- 
-      </div>
-
-
-
+      <!-- tweet container  -->
+      <article class="tweets-containers">
+        </article>
      
+        
+
+      </div>
     </main>
   </body>
 </html>
