@@ -10,9 +10,18 @@ $(document).ready(function () {
   $("#formtweet").submit(function (event) {
     event.preventDefault();
     let seralizedData = $("#tweet-text").serialize();
+    let value = $("#tweet-text").val().length;
+    let empty = $("#tweet-text").val().trim() === "";
 
-    if (seralizedData.length > 140) {
-      alert("You have reached your text limit");
+    console.log(seralizedData.length);
+
+    if (value > 140) {
+      $("#over-error").slideDown();
+      return;
+    }
+
+    if (empty) {
+      $("#empty-error").slideDown();
       return;
     }
 
@@ -22,50 +31,26 @@ $(document).ready(function () {
       url: "/tweets",
       data: seralizedData,
     }).then(() => {
-      $('#tweet-text').val('');
+      $(".counter").text("140");
+      $("#tweet-text").val("");
       return loadtweets();
-      
     });
   });
-
-  
 });
 
-// const tweetData = [
-//   {
-//     user: {
-//       name: "Newton",
-//       avatars: "https://i.imgur.com/73hZDYK.png",
-//       handle: "@SirIsaac",
-//     },
-//     content: {
-//       text:
-//         "If I have seen further it is by standing on the shoulders of giants",
-//     },
-//     created_at: 1611592370145,
-//   },
-
-//   {
-//     user: {
-//       name: "Descartes",
-//       avatars: "https://i.imgur.com/nlhLi3I.png",
-//       handle: "@rd",
-//     },
-//     content: {
-//       text: "Je pense , donc je suis",
-//     },
-//     created_at: 1611678770146,
-//   },
-// ];
-
-//  takes in tweet object and returns tweet <article>
+//  Function takes in tweet object and returns tweet <article>
 createTweetElement = function (tweetData) {
-// escape function for cross site scripting 
-  const escape =  function(str) {
-    let div = document.createElement('div');
+  // escape function for cross site scripting
+  const escape = function (str) {
+    let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
+  };
+
+  // // // Date updated variables 
+  // const time = new Date(tweetObjects.created_at);
+  // const currentTime = Date.now();
+  // const Diff = Math.floor((currentTime-time) /1000 / 60 /60 / 24)
 
 
   const tweetElement = `
@@ -79,7 +64,7 @@ createTweetElement = function (tweetData) {
   <div class="tweet-username">${tweetData.user.handle}</div>
 </div>
 <!-- body div -->
-<div class="tweet-body">${escape(tweetData.content.text)}css</div>
+<div class="tweet-body">${escape(tweetData.content.text)}</div>
 <!-- tweet action div  -->
 <div class="tweet-actions">
   <div class="tweet-timestamp">${tweetData.created_at}</div>
