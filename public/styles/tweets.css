@@ -39,6 +39,14 @@
 }
 
 
+.tweet-icons{
+  visibility: hidden;
+}
+.tweet-icons:hover{
+  visibility: visible;
+  cursor: default;
+}
+
 .tweet-body {
   padding: 2.5rem 0rem;
    
@@ -49,3 +57,5 @@
   border-top: solid;
   justify-content: space-between;
 }
+
+
