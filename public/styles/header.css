@@ -7,11 +7,15 @@
   height: 400px;
   width: 100%;
   background-color: #ffc9c7;
-background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
+  background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
   Margin-top: 120px;
 }
 nav span {
   font-family: 'Bungee', sans-serif;
 }
 
+/* Desktop  */
+@media (min-width: 1024px) {
 
+
+};
