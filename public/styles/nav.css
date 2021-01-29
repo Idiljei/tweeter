@@ -25,9 +25,16 @@ div.right {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px
+  gap: 2px;
 }
 
 i.arrow {
   color: red;
 }
+
+/* Desktop  */
+@media (min-width: 1024px) {
+  nav {
+    margin: auto;
+  }
+} ;
