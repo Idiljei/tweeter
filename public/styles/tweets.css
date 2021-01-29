@@ -1,32 +1,44 @@
 .tweet-container {
-  border: 2px solid;
+  border: 1px solid;
   border-radius: 2px;
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: 2em;
   margin: auto;
+  margin-bottom: 1em;
+  
 }
 
 .tweet-container:hover {
   /* for the box shadow  */
   display: flex;
   background-color: #eee;
-  box-shadow: 10px 10px 3px 1px #ff8c57;
+  box-shadow: 5px 5px 3px 1px #e6d7d0;
 }
 
 .tweet-container:hover .tweet-username {
   /* for the username*/
-  color: #000000;
   opacity: 1;
+  display: block;
+
+}
+
+.tweet-username {
+  display: none;
+  color: #ff8c57
 }
 
 .tweet-container:hover .tweet-icons {
   display: block;
+  opacity: 1;
+
 }
 
 .tweet-icons {
   display: none;
+  color: #ff8c57
+  
 }
 
 .tweet-container-userinfo {
@@ -38,16 +50,23 @@
 .tweet-profile {
   display: flex;
   align-items: center;
+
 }
 
 .tweet-profile img {
-  /* width: auto; */
   height: 3.5em;
+
 }
 
 .tweet-body {
-  padding: 2.5rem 0rem;
+  padding: 1px;
+  padding-top: 5px;
+  padding-bottom: 1em;
+  margin-top: 40px;
+  text-align: left;
+   
 }
+
 
 .tweet-actions {
   display: flex;
@@ -59,8 +78,11 @@
   .container {
     min-width: 15em;
     padding-top: 150px;
+    flex-direction: row;
   }
   .tweet-container {
     margin-bottom: 1em;
+    word-break: break-all;
+    margin-top: 1 em;
   }
 } ;
