@@ -1,26 +1,33 @@
 .tweet-container {
-  border: solid; 
+  border: 2px solid;
   border-radius: 2px;
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: 2em;
-  margin: 2em 0em;
+  margin: auto;
 }
 
-.tweet-container:hover{
+.tweet-container:hover {
   /* for the box shadow  */
-  display:flex;
-  background-color:#eee;
-  box-shadow:10px 10px 3px 1px #ff8c57;
+  display: flex;
+  background-color: #eee;
+  box-shadow: 10px 10px 3px 1px #ff8c57;
 }
 
-.tweet-container:hover .tweet-username{
+.tweet-container:hover .tweet-username {
   /* for the username*/
-  color: #b384d3; opacity: 1
-  
+  color: #000000;
+  opacity: 1;
 }
 
+.tweet-container:hover .tweet-icons {
+  display: block;
+}
+
+.tweet-icons {
+  display: none;
+}
 
 .tweet-container-userinfo {
   display: flex;
@@ -38,18 +45,8 @@
   height: 3.5em;
 }
 
-
-.tweet-icons{
-  visibility: hidden;
-}
-.tweet-icons:hover{
-  visibility: visible;
-  cursor: default;
-}
-
 .tweet-body {
   padding: 2.5rem 0rem;
-   
 }
 
 .tweet-actions {
@@ -58,4 +55,12 @@
   justify-content: space-between;
 }
 
-
+@media (min-width: 1024px) {
+  .container {
+    min-width: 15em;
+    padding-top: 150px;
+  }
+  .tweet-container {
+    margin-bottom: 1em;
+  }
+} ;
