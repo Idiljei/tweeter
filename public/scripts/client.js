@@ -35,23 +35,24 @@ $(document).ready(function () {
       $("#tweet-text").val("");
       return loadtweets();
     });
+
   });
+  loadtweets();
 });
 
 //  Function takes in tweet object and returns tweet <article>
 createTweetElement = function (tweetData) {
+  // to update the date
+  // const time = new Date()
+  //   const currentTime = Date.now(tweetData.created_at)
+  //   const daysAgo = Math.floor((currentTime - time) / 1000 / 60 / 60 / 24)
+
   // escape function for cross site scripting
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
-
-  // // // Date updated variables 
-  // const time = new Date(tweetObjects.created_at);
-  // const currentTime = Date.now();
-  // const Diff = Math.floor((currentTime-time) /1000 / 60 /60 / 24)
-
 
   const tweetElement = `
 <div class="tweet-container">
