@@ -8,34 +8,37 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
+  scroll-behavior: smooth;
 }
+
+
+
 
 /*
  * Global layout stuff
  */
 
- nav span {
-  font-family: 'Bungee', sans-serif;
- }
+nav span {
+  font-family: "Bungee", sans-serif;
+}
 
- body {
+body {
   display: flex;
   flex-direction: column;
   color: #545149;
   background-color: #ffffff;
   font-size: 24px;
-  font-family:"Source Sans Pro", sans-serif;
-  
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- .container {
+.container {
   width: 90%;
   align-self: center;
   text-align: center;
- }
+}
 
- 
+
