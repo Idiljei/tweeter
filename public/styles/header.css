@@ -4,18 +4,24 @@
   align-items: center;
   flex-direction: column;
   background-color: #e7e2e2;
-  height: 400px;
+  height: 400%;
   width: 100%;
-  background-color: #ffc9c7;
+  background-color: #e7cac2;
   background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
-  Margin-top: 120px;
+  margin-top: 120px;
 }
 nav span {
-  font-family: 'Bungee', sans-serif;
+  font-family: "Bungee", sans-serif;
 }
 
 /* Desktop  */
 @media (min-width: 1024px) {
-
-
-};
+  .page-header {
+    /* display: flexbox; */
+    flex-direction: column;
+    padding: 2rem;
+    margin-top: 5rem;
+    height: 40%;
+    width: 40%;
+  }
+} ;
