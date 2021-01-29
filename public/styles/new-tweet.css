@@ -4,17 +4,17 @@
   justify-content: center;
   width: 100%;
   height: 200px;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
-/* Parent Class for button and counter */
 .submission {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1em;
 }
 
-.button {
-  background-color: #4056a1;
+#tweet-button {
+  background-color: #ff8c57;
   color: white;
   font-family: "Source Sans Pro", sans-serif;
 }
@@ -29,9 +29,14 @@ textarea {
   border: none;
   resize: none;
   background-color: transparent;
-  border-bottom: 2px solid black;
-  /* padding: 3rem; */
+  border-bottom: 1px solid black;
 }
+
+.humming {
+  text-align: left;
+  width: 100%;
+}
+
 
 .addColour {
   color: red;
@@ -39,22 +44,26 @@ textarea {
 
 #over-error {
   display: none;
-  color: #feefb3;
-  background-color: #e63e46;
+  color: #fafafa;
+  background-color: #f7a0a5;
 }
 
 #empty-error {
   display: none;
-  color: #feefb3;
-  background-color: #e63e46;
+  color: #fafafa;
+  background-color: #f7a0a5;
 }
 
 /* Desktop  */
 @media (min-width: 1024px) {
-  textarea {
-    padding: 1px; /* margin-top: 15rem; */
-  }
+  
   .submission {
     margin-bottom: 1em;
+  }
+  
+  .button{
+    background-color: #ff8c57;
+    color: white;
+    font-family: "Source Sans Pro", sans-serif;
   }
 } ;
