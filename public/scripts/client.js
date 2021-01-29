@@ -13,8 +13,6 @@ $(document).ready(function () {
     let value = $("#tweet-text").val().length;
     let empty = $("#tweet-text").val().trim() === "";
 
-    console.log(seralizedData.length);
-
     if (value > 140) {
       $("#over-error").slideDown();
       return;
@@ -35,18 +33,11 @@ $(document).ready(function () {
       $("#tweet-text").val("");
       return loadtweets();
     });
-
   });
   loadtweets();
 });
 
-//  Function takes in tweet object and returns tweet <article>
 createTweetElement = function (tweetData) {
-  // to update the date
-  // const time = new Date()
-  //   const currentTime = Date.now(tweetData.created_at)
-  //   const daysAgo = Math.floor((currentTime - time) / 1000 / 60 / 60 / 24)
-
   // escape function for cross site scripting
   const escape = function (str) {
     let div = document.createElement("div");
@@ -54,30 +45,36 @@ createTweetElement = function (tweetData) {
     return div.innerHTML;
   };
 
+  //Date and time Plugins 
+  dayjs().format();
+  dayjs.extend(window.dayjs_plugin_relativeTime);
+  let createdat = tweetData.created_at
+  let time = dayjs(createdat).fromNow()
+
   const tweetElement = `
-<div class="tweet-container">
-<!-- first div -->
-<div class="tweet-container-userinfo">
-  <div class="tweet-profile">
-    <img src=${tweetData.user.avatars} alt="Profile Image" />
-    <p> ${tweetData.user.name}</p>
-  </div>
-  <div class="tweet-username">${tweetData.user.handle}</div>
-</div>
-<!-- body div -->
-<div class="tweet-body">${escape(tweetData.content.text)}</div>
-<!-- tweet action div  -->
-<div class="tweet-actions">
-  <div class="tweet-timestamp">${tweetData.created_at}</div>
-  <div class="tweet-icons">
-    <i class="fas fa-flag"></i>
-    <i class="far fa-flag"></i>
-    <i class="fas fa-retweet"></i>
-    <i class="fas fa-heart"></i>
-    <i class="far fa-heart"></i>
-  </div>
-</div>
-`;
+    <div class="tweet-container">
+    <!-- first div -->
+    <div class="tweet-container-userinfo">
+      <div class="tweet-profile">
+        <img src=${tweetData.user.avatars} alt="Profile Image" />
+        <p> ${tweetData.user.name}</p>
+      </div>
+      <div class="tweet-username">${tweetData.user.handle}</div>
+    </div>
+    <!-- body div -->
+    <div class="tweet-body">${escape(tweetData.content.text)}</div>
+    <!-- tweet action div  -->
+    <div class="tweet-actions">
+      <div class="tweet-timestamp">${time}</div>
+      <div class="tweet-icons">
+        <i class="fas fa-flag"></i>
+        <i class="far fa-flag"></i>
+        <i class="fas fa-retweet"></i>
+        <i class="fas fa-heart"></i>
+        <i class="far fa-heart"></i>
+      </div>
+    </div>
+    `;
   return tweetElement;
 };
 
