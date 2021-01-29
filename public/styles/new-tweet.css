@@ -42,3 +42,18 @@ textarea{
 .addColour{
   color: red;
 }
+
+
+#over-error {
+  display: none;
+  color: #feefb3; 
+  background-color: #e63e46;
+}
+
+#empty-error {
+  display: none;
+  color: #feefb3; 
+  background-color: #e63e46;
+}
+
+
