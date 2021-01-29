@@ -34,10 +34,11 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-.container {
+main {
   width: 90%;
   align-self: center;
   text-align: center;
+ 
 }
 
 /* Desktop  */
@@ -45,5 +46,15 @@ body {
   .container {
     display: flex;
     gap: 1em;
+  }
+
+  body{
+    flex-direction: row;
+  }
+
+  main{
+    margin-top: 8em; 
+    margin-left: 2em;
+    margin-right: 2em; 
   }
 } ;
