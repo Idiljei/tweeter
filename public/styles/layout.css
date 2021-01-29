@@ -6,13 +6,12 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
   scroll-behavior: smooth;
 }
-
-
-
 
 /*
  * Global layout stuff
@@ -41,4 +40,10 @@ body {
   text-align: center;
 }
 
-
+/* Desktop  */
+@media (min-width: 1024px) {
+  .container {
+    display: flex;
+    gap: 1em;
+  }
+} ;
