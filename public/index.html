@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
@@ -49,7 +50,8 @@
       <span>tweeter</span>
       <div class="right">
         <p><b>Write</b> a new tweet</p>
-        <i class="arrow fas fa-angle-double-down"></i>
+        <a href="#page-header"><i class="arrow fas fa-angle-double-down"></i>  </a>
+
       </div>
     </nav>
 
@@ -69,17 +71,19 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <!-- Tweet text  -->
-      <section class="new-tweet">
+      <section class="tweet-text">
         <h2></h2>
-        <p></p>
         <form id="formtweet" action="/tweets/" method="POST">
           <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"> </textarea>
+          <textarea required name="text" id="tweet-text"> </textarea>
           <div class="submission">
             <button id="tweet-button" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+        <p id="over-error">"You have reached your text limit"</p>
+        <p id="empty-error">"Your text box is empty! Please try again"</p>
+
       </section>
 
       <!-- tweet container  -->
