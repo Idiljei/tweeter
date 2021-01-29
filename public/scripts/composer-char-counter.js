@@ -8,6 +8,8 @@ $(document).ready(function () {
       counter.addClass("addColour");
     } else {
       counter.removeClass("addColour");
+      $("#over-error").slideUp();
+      $("#empty-error").slideUp();
     }
   });
 });
